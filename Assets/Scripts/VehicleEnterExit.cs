@@ -26,6 +26,12 @@ public class VehicleEnterExit : MonoBehaviour
     private bool isDriving;
     private Transform playerOriginalParent;
 
+    public bool IsDriving => isDriving;
+
+    public bool CanInteractFromOutside =>
+    !isDriving &&
+    Vector3.Distance(playerRoot.transform.position, doorPoint.position) <= interactDistance;
+
     private void Start()
     {
         playerOriginalParent = playerRoot.transform.parent;
