@@ -43,6 +43,8 @@ public class SCC_InputManager : SCC_Singleton<SCC_InputManager> {
     /// Gets all inputs and registers button events.
     /// </summary>
     /// <returns></returns>
+    
+
     public void GetInputs() {
 
         if (inputActions == null) {
